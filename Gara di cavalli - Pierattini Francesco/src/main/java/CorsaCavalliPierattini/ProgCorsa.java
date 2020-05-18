@@ -9,6 +9,13 @@ package CorsaCavalliPierattini;
  *
  * @author Utente
  */
-public class Campo {
+public class ProgCorsa {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Home home = new Home();
+    }
     
 }
