@@ -30,7 +30,7 @@ public class Gara implements Runnable{
     }
     
     public void run(){
-        int dimImmagine = 35;
+        int dimImmagine = 80;
         int dimPista = 960;
         while((cavallo.getCordx() + dimImmagine) < dimPista){
             if((conta % 10) == 0)

@@ -19,7 +19,7 @@ public class Cavallo extends JPanel{
     public Cavallo(int yy, int xx){
         this.cordx = 0;
         this.cordy = yy;
-        setSize(50,50);
+        setSize(80,80);
         Toolkit tk = Toolkit.getDefaultToolkit();
         switch(xx){
             case 1: {img = tk.getImage("C:\\Users\\Utente\\Desktop\\Corsa Cavalli\\Gara di cavalli - Pierattini Francesco\\src\\immagini\\cavallo1.png"); break;}

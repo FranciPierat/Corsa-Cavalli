@@ -45,7 +45,7 @@ public class Ippodromo extends JFrame{
         cavalli = new Cavallo[nCavalli];
         partecipanti = new Gara[nCavalli];
         posizione = 1;
-        int partenza = 30;
+        int partenza = 10;
         arrnCavallo = new int [nCavalli];
         for(int xx = 0; xx < nCavalli; xx++){
             nCavallo = (xx + 1);
