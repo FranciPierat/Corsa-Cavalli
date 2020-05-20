@@ -114,82 +114,73 @@ public class Home extends JFrame{
                 bottone2.addActionListener(new ActionListener(){
                     @Override
                     public void actionPerformed(ActionEvent e){
-                        m.stopMusica();
                         int n = Integer.parseInt(bottone2.getText());
                         home.dispose();
-                        Ippodromo i = new Ippodromo(n);
+                        Scommesse s = new Scommesse(n);
                     }
                 });
                 bottone3.addActionListener(new ActionListener(){
                     @Override
                     public void actionPerformed(ActionEvent e){
-                        m.stopMusica();
                         int n = Integer.parseInt(bottone3.getText());
                         home.dispose();
-                        Ippodromo i = new Ippodromo(n);
+                        Scommesse s = new Scommesse(n);
                     }
                 });
                 bottone4.addActionListener(new ActionListener(){
                     @Override
                     public void actionPerformed(ActionEvent e){
-                        m.stopMusica();
                         int n = Integer.parseInt(bottone4.getText());
                         home.dispose();
-                        Ippodromo i = new Ippodromo(n);
+                        Scommesse s = new Scommesse(n);
                     }
                 });
                 bottone5.addActionListener(new ActionListener(){
                     @Override
                     public void actionPerformed(ActionEvent e){
-                        m.stopMusica();
                         int n = Integer.parseInt(bottone5.getText());
                         home.dispose();
-                        Ippodromo i = new Ippodromo(n);
+                        Scommesse s = new Scommesse(n);
                     }
                 });
                 bottone6.addActionListener(new ActionListener(){
                     @Override
                     public void actionPerformed(ActionEvent e){
-                        m.stopMusica();
                         int n = Integer.parseInt(bottone6.getText());
                         home.dispose();
-                        Ippodromo i = new Ippodromo(n);
+                        Scommesse s = new Scommesse(n);
                     }
                 });
                 bottone7.addActionListener(new ActionListener(){
                     @Override
                     public void actionPerformed(ActionEvent e){
-                        m.stopMusica();
                         int n = Integer.parseInt(bottone7.getText());
                         home.dispose();
-                        Ippodromo i = new Ippodromo(n);
+                        Scommesse s = new Scommesse(n);
                     }
                 });
                 bottone8.addActionListener(new ActionListener(){
                     @Override
                     public void actionPerformed(ActionEvent e){
-                        m.stopMusica();
                         int n = Integer.parseInt(bottone8.getText());
                         home.dispose();
-                        Ippodromo i = new Ippodromo(n);
+                        Scommesse s = new Scommesse(n);
                     }
                 });
                 bottone9.addActionListener(new ActionListener(){
                     @Override
                     public void actionPerformed(ActionEvent e){
-                        m.stopMusica();
                         int n = Integer.parseInt(bottone9.getText());
                         home.dispose();
-                        Ippodromo i = new Ippodromo(n);
+                        Scommesse s = new Scommesse(n);
                     }
                 });
                 bottone10.addActionListener(new ActionListener(){
                     @Override
                     public void actionPerformed(ActionEvent e){
-                        m.stopMusica();
                         int n = Integer.parseInt(bottone10.getText());
                         home.dispose();
-                        Ippodromo i = new Ippodromo(n);
+                        Scommesse s = new Scommesse(n);
                     }
                 });
             }

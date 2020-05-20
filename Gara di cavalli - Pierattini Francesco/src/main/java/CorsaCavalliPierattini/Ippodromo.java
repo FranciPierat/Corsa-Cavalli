@@ -15,7 +15,10 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 public class Ippodromo extends JFrame{
     Musica m = new Musica();
+    int[] arrnCavallo;
+    int nCavallo;
     int n_Cavalli;
+    int cavalloScommesso;
     int posizione;
     Cavallo[] cavalli;
     Gara[] partecipanti;
@@ -23,9 +26,10 @@ public class Ippodromo extends JFrame{
     Graphics offscreen;
     Image buffer_virtuale;
     
-    public Ippodromo(int nCavalli){
+    public Ippodromo(int nCavalli, int cScommesso){
         super("Corsa dei cavalli");
         n_Cavalli = nCavalli;
+        cavalloScommesso = cScommesso;
         switch(n_Cavalli){
             case 2:{setSize(1000,230); break;}
             case 3:{setSize(1000,330); break;}
@@ -42,7 +46,9 @@ public class Ippodromo extends JFrame{
         partecipanti = new Gara[nCavalli];
         posizione = 1;
         int partenza = 30;
+        arrnCavallo = new int [nCavalli];
         for(int xx = 0; xx < nCavalli; xx++){
+            nCavallo = (xx + 1);
             cavalli[xx] = new Cavallo(partenza, xx+1);
             partecipanti[xx] = new Gara(cavalli[xx], this);
             partenza = partenza + 100;
@@ -74,20 +80,37 @@ public class Ippodromo extends JFrame{
     
     public void visualizzaClassifica(){
         JLabel[] arrivi;
-        arrivi = new JLabel[n_Cavalli];
+        arrivi = new JLabel[n_Cavalli + 1];
         JFrame classifica = new JFrame("Classifica");
         classifica.setSize(500, 1000);
-        classifica.setLocation(280, 80);
+        classifica.setLocation(1040, 0);
         classifica.setBackground(Color.BLUE);
         classifica.setDefaultCloseOperation(EXIT_ON_CLOSE);
         classifica.getContentPane().setLayout(new GridLayout(13, 1));
+        int i = 0;
         for(int xx = 1; xx < n_Cavalli + 1; xx++){
             for(int yy = 0; yy < n_Cavalli; yy++){
                 if(partecipanti[yy].posizione == xx){
-                    arrivi[yy] = new JLabel(xx + "° classificato cavallo in " + (yy + 1) + "° corsia");
-                    arrivi[yy].setFont(new Font("Times New Roman", Font.ITALIC, 25));
-                    arrivi[yy].setBackground(Color.blue);
-                    classifica.getContentPane().add(arrivi[yy]);
+                    if(cavalloScommesso != 0 && i == 0){
+                        if(arrnCavallo[yy] == cavalloScommesso){
+                            arrivi[yy] = new JLabel("Bravo hai indovinato");
+                            arrivi[yy].setFont(new Font("Times New Roman", Font.ITALIC, 25));
+                            arrivi[yy].setBackground(Color.blue);
+                            classifica.getContentPane().add(arrivi[yy]);
+                            i++;
+                        }
+                        else{
+                            arrivi[yy] = new JLabel("Mi dispiace non hai indovinato");
+                            arrivi[yy].setFont(new Font("Times New Roman", Font.ITALIC, 25));
+                            arrivi[yy].setBackground(Color.blue);
+                            classifica.getContentPane().add(arrivi[yy]);
+                            i++;
+                        }
+                    }
+                    arrivi[yy + 1] = new JLabel(xx + "° classificato cavallo in " + (yy + 1) + "° corsia");
+                    arrivi[yy + 1].setFont(new Font("Times New Roman", Font.ITALIC, 25));
+                    arrivi[yy + 1].setBackground(Color.blue);
+                    classifica.getContentPane().add(arrivi[yy + 1]);
                 }
             }
         }

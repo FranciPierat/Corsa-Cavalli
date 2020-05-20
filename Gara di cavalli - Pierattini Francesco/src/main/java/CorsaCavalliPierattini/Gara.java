@@ -24,6 +24,7 @@ public class Gara implements Runnable{
         conta = 0;
         velocita = 2;
         t = new Thread(this);
+        t.setName("" + i.nCavallo);
         t.start();
         posizione = 0;
     }
