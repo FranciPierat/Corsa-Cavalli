@@ -21,6 +21,7 @@ public class Scommesse extends JFrame{
     public Scommesse(int n){
         n_Cavalli = n;
         JFrame scom = new JFrame("Corsa dei cavalli");
+        scom.setIconImage(new ImageIcon("C:\\Users\\Utente\\Desktop\\Corsa Cavalli\\Gara di cavalli - Pierattini Francesco\\src\\immagini\\cavallo1.png").getImage());
         scom.setSize(1200, 900);
         scom.setResizable(false);
         scom.setLayout(null);
@@ -65,6 +66,7 @@ public class Scommesse extends JFrame{
     
     public void cambiaPagina(){
         JFrame scommesse = new JFrame("Corsa dei cavalli");
+        scommesse.setIconImage(new ImageIcon("C:\\Users\\Utente\\Desktop\\Corsa Cavalli\\Gara di cavalli - Pierattini Francesco\\src\\immagini\\cavallo1.png").getImage());
         JPanel pan = new JPanel();
         JLabel labSli = new JLabel("Su quale cavallo vuoi puntare?");
         pan.add(labSli);

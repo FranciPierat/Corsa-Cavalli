@@ -40,6 +40,7 @@ public class Ippodromo extends JFrame{
             case 9:{setSize(1000,930); break;}
             case 10:{setSize(1000,1030); break;}
         }
+        setIconImage(new ImageIcon("C:\\Users\\Utente\\Desktop\\Corsa Cavalli\\Gara di cavalli - Pierattini Francesco\\src\\immagini\\cavallo1.png").getImage());
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         pista = new Campo();
         cavalli = new Cavallo[nCavalli];
@@ -48,6 +49,7 @@ public class Ippodromo extends JFrame{
         int partenza = 10;
         arrnCavallo = new int [nCavalli];
         for(int xx = 0; xx < nCavalli; xx++){
+            arrnCavallo[xx] = (xx + 1);
             nCavallo = (xx + 1);
             cavalli[xx] = new Cavallo(partenza, xx+1);
             partecipanti[xx] = new Gara(cavalli[xx], this);
@@ -82,6 +84,7 @@ public class Ippodromo extends JFrame{
         JLabel[] arrivi;
         arrivi = new JLabel[n_Cavalli + 1];
         JFrame classifica = new JFrame("Classifica");
+        classifica.setIconImage(new ImageIcon("C:\\Users\\Utente\\Desktop\\Corsa Cavalli\\Gara di cavalli - Pierattini Francesco\\src\\immagini\\cavallo1.png").getImage());
         classifica.setSize(500, 1000);
         classifica.setLocation(1040, 0);
         classifica.setBackground(Color.BLUE);
@@ -107,7 +110,7 @@ public class Ippodromo extends JFrame{
                             i++;
                         }
                     }
-                    arrivi[yy + 1] = new JLabel(xx + "° classificato cavallo in " + (yy + 1) + "° corsia");
+                    arrivi[yy + 1] = new JLabel(xx + "° classificato: " + " cavallo " + arrnCavallo[yy]);
                     arrivi[yy + 1].setFont(new Font("Times New Roman", Font.ITALIC, 25));
                     arrivi[yy + 1].setBackground(Color.blue);
                     classifica.getContentPane().add(arrivi[yy + 1]);

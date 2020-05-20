@@ -18,6 +18,7 @@ public class Home extends JFrame{
         Musica m = new Musica();
         //creazione Frame per la home
         JFrame home = new JFrame("Corsa dei cavalli");
+        home.setIconImage(new ImageIcon("C:\\Users\\Utente\\Desktop\\Corsa Cavalli\\Gara di cavalli - Pierattini Francesco\\src\\immagini\\cavallo1.png").getImage());
         home.setSize(1200, 900);
         home.setResizable(false);
         home.setLayout(null);
