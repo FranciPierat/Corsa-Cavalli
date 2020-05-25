@@ -6,22 +6,26 @@
 package CorsaCavalliPierattini;
 
 /**
- *
- * @author Utente
+ * classe che genera la pista
+ * @author Pierattini Francesco
  */
 import javax.swing.*;
 import java.awt.*;
 import java.util.HashSet;
 public class Campo extends JPanel{
     
+    /**
+     * il metodo che disegna la pista
+     * @param g la variabile che diegna la pista
+     */
     public void paint(Graphics g){
-        g.setColor(Color.green);
+        g.setColor(Color.green); //l'erba
         g.fillRect(0, 0, 1000, 1020);
         
-        g.setColor(Color.LIGHT_GRAY);
+        g.setColor(Color.LIGHT_GRAY); //la base di partenza
         g.fillRect(0, 0, 90, 1020);
         
-        g.setColor(Color.GRAY);
+        g.setColor(Color.GRAY); //i separatori
         g.fillRect(0, 0, 1000, 10);
         g.fillRect(0, 100, 1000, 10);
         g.fillRect(0, 200, 1000, 10);
@@ -34,7 +38,7 @@ public class Campo extends JPanel{
         g.fillRect(0, 900, 1000, 10);
         g.fillRect(0, 1000, 1000, 10);
         
-        g.setColor(Color.BLACK);
+        g.setColor(Color.BLACK); //la linea di partenza
         g.fillRect(85, 0, 10, 1020);
         
         int h=0,l=0;

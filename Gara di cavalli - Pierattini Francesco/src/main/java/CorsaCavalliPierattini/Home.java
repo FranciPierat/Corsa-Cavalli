@@ -10,10 +10,13 @@ import java.awt.*;
 import java.awt.event.*;
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 /**
- *
- * @author Utente
+ * classe della home
+ * @author Pierattini Francesco
  */
 public class Home extends JFrame{
+    /**
+     * costruttore che costruisce il Jframe della home
+     */
     public Home(){
         Musica m = new Musica();
         //creazione Frame per la home
@@ -112,6 +115,7 @@ public class Home extends JFrame{
                 sfondo2.add(bottone10);
                 home.add(sfondo2);
                 home.repaint();
+                //al click apre il frame delle scommesse
                 bottone2.addActionListener(new ActionListener(){
                     @Override
                     public void actionPerformed(ActionEvent e){
@@ -120,6 +124,7 @@ public class Home extends JFrame{
                         Scommesse s = new Scommesse(n);
                     }
                 });
+                //al click apre il frame delle scommesse
                 bottone3.addActionListener(new ActionListener(){
                     @Override
                     public void actionPerformed(ActionEvent e){
@@ -128,6 +133,7 @@ public class Home extends JFrame{
                         Scommesse s = new Scommesse(n);
                     }
                 });
+                //al click apre il frame delle scommesse
                 bottone4.addActionListener(new ActionListener(){
                     @Override
                     public void actionPerformed(ActionEvent e){
@@ -136,6 +142,7 @@ public class Home extends JFrame{
                         Scommesse s = new Scommesse(n);
                     }
                 });
+                //al click apre il frame delle scommesse
                 bottone5.addActionListener(new ActionListener(){
                     @Override
                     public void actionPerformed(ActionEvent e){
@@ -144,6 +151,7 @@ public class Home extends JFrame{
                         Scommesse s = new Scommesse(n);
                     }
                 });
+                //al click apre il frame delle scommesse
                 bottone6.addActionListener(new ActionListener(){
                     @Override
                     public void actionPerformed(ActionEvent e){
@@ -152,6 +160,7 @@ public class Home extends JFrame{
                         Scommesse s = new Scommesse(n);
                     }
                 });
+                //al click apre il frame delle scommesse
                 bottone7.addActionListener(new ActionListener(){
                     @Override
                     public void actionPerformed(ActionEvent e){
@@ -160,6 +169,7 @@ public class Home extends JFrame{
                         Scommesse s = new Scommesse(n);
                     }
                 });
+                //al click apre il frame delle scommesse
                 bottone8.addActionListener(new ActionListener(){
                     @Override
                     public void actionPerformed(ActionEvent e){
@@ -168,6 +178,7 @@ public class Home extends JFrame{
                         Scommesse s = new Scommesse(n);
                     }
                 });
+                //al click apre il frame delle scommesse
                 bottone9.addActionListener(new ActionListener(){
                     @Override
                     public void actionPerformed(ActionEvent e){
@@ -176,6 +187,7 @@ public class Home extends JFrame{
                         Scommesse s = new Scommesse(n);
                     }
                 });
+                //al click apre il frame delle scommesse
                 bottone10.addActionListener(new ActionListener(){
                     @Override
                     public void actionPerformed(ActionEvent e){

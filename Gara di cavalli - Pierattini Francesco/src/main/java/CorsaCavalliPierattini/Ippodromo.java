@@ -6,26 +6,31 @@
 package CorsaCavalliPierattini;
 
 /**
- *
- * @author Utente
+ * classe dell'ippodromo
+ * @author Pierattini Francesco
  */
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 public class Ippodromo extends JFrame{
-    Musica m = new Musica();
-    int[] arrnCavallo;
-    int nCavallo;
-    int n_Cavalli;
-    int cavalloScommesso;
-    int posizione;
-    Cavallo[] cavalli;
-    Gara[] partecipanti;
-    Campo pista;
-    Graphics offscreen;
-    Image buffer_virtuale;
+    Musica m = new Musica(); //musica
+    int[] arrnCavallo; //array con i numeri dei cavalli
+    int nCavallo; //numero del cavallo partecipante
+    int n_Cavalli; //numero dei cavalli
+    int cavalloScommesso; //numero del cavallo scommesso
+    int posizione; //posizione del cavallo
+    Cavallo[] cavalli; //array dei cavalli
+    Gara[] partecipanti; //array dei partecipanti
+    Campo pista; //la pista
+    Graphics offscreen;     //per la gestione del
+    Image buffer_virtuale;  //doppio buffering
     
+    /**
+     * costruttore che posizione e disegna il percorso
+     * @param nCavalli il numero dei cavalli che partecipano
+     * @param cScommesso il numero del cavallo che ha scommesso
+     */
     public Ippodromo(int nCavalli, int cScommesso){
         super("Corsa dei cavalli");
         n_Cavalli = nCavalli;
@@ -61,14 +66,25 @@ public class Ippodromo extends JFrame{
         m.musica("C:\\Users\\Utente\\Desktop\\Corsa Cavalli\\Gara di cavalli - Pierattini Francesco\\src\\temi\\Race_theme.wav");
     }
     
+    /**
+     * metodo che fa ritornare il numero dei cavalli che partecipano
+     * @return il numero dei cavalli che partecipano
+     */
     public int getnCavalli(){
         return this.n_Cavalli;
     }
     
+    /**
+     * metodo che assegna la posizione al cavallo che ha appena raggiunto il traguardo
+     * @return la posizione del cavallo
+     */
     public synchronized int getPosizione(){
         return posizione++;
     }
     
+    /**
+     * metodo che verifica se tutti i concorrenti abbiano raggiunto il traguardo
+     */
     public synchronized void controllaArrivi(){
         boolean arrivati = true;
         for(int xx = 0; xx < n_Cavalli; xx++){
@@ -80,6 +96,9 @@ public class Ippodromo extends JFrame{
         }
     }
     
+    /**
+     * metodo che realizza la classifica
+     */
     public void visualizzaClassifica(){
         JLabel[] arrivi;
         arrivi = new JLabel[n_Cavalli + 1];
@@ -133,6 +152,7 @@ public class Ippodromo extends JFrame{
         classifica.add(esci);
         classifica.setVisible(true);
         setResizable(false);
+        //al click torni alla home
         rigioca.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
@@ -142,6 +162,7 @@ public class Ippodromo extends JFrame{
                 Home h = new Home();
             }
         });
+        //al click termina il programma
         esci.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
@@ -150,10 +171,18 @@ public class Ippodromo extends JFrame{
         });
     }
     
+    /**
+     * metodo relativo al disegno sullo schermo
+     * @param g la pista che verrà disegnata
+     */
     public void update(Graphics g){
         paint(g);
     }
     
+    /**
+     * metodo che elimina lo sfarfallio delle immagini con la tecnica del doppio buffering
+     * @param g la pista che verrà modificata
+     */
     public void paint(Graphics g){
         if(cavalli != null){
             Graphics2D screen = (Graphics2D)g;

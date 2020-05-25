@@ -6,8 +6,8 @@
 package CorsaCavalliPierattini;
 
 /**
- *
- * @author Utente
+ * la classe che gestisce le scommesse
+ * @author Pierattini Francesco
  */
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -15,9 +15,13 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 public class Scommesse extends JFrame{
-    Musica m = new Musica();
-    private int n_Cavalli;
+    Musica m = new Musica(); //musica
+    private int n_Cavalli; //numero dei cavalli
     
+    /**
+     * costruttore che crea il frame delle scommesse
+     * @param n il numero dei cavalli che partecipano
+     */
     public Scommesse(int n){
         n_Cavalli = n;
         JFrame scom = new JFrame("Corsa dei cavalli");
@@ -45,6 +49,7 @@ public class Scommesse extends JFrame{
         sfondo3.add(btnSI);
         sfondo3.add(btnNO);
         scom.add(sfondo3);
+        //al click cambia pagina
         btnSI.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
@@ -52,6 +57,7 @@ public class Scommesse extends JFrame{
                 cambiaPagina();
             }
         });
+        //al click apre la pista
         btnNO.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
@@ -64,6 +70,9 @@ public class Scommesse extends JFrame{
         scom.setResizable(false);
     }
     
+    /**
+     * metodo che cambia la pagina per scommettere
+     */
     public void cambiaPagina(){
         JFrame scommesse = new JFrame("Corsa dei cavalli");
         scommesse.setIconImage(new ImageIcon("C:\\Users\\Utente\\Desktop\\Corsa Cavalli\\Gara di cavalli - Pierattini Francesco\\src\\immagini\\cavallo1.png").getImage());
@@ -90,6 +99,7 @@ public class Scommesse extends JFrame{
         scommesse.setSize(500,150);
         scommesse.setLocation(560, 420);
         scommesse.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        //al click apre la pista
         btnAvvio.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){

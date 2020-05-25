@@ -6,18 +6,23 @@
 package CorsaCavalliPierattini;
 
 /**
- *
- * @author Utente
+ * classe che gestisce la gara
+ * @author Pierattini Francesco
  */
 public class Gara implements Runnable{
-    private Cavallo cavallo;
-    private Ippodromo ippodromo;
-    int velocita;
-    Thread t;
-    int conta;
-    int posizione;
-    Campo c = new Campo();
+    private Cavallo cavallo; //il cavallo
+    private Ippodromo ippodromo; //il campo
+    int velocita; //la velocità
+    Thread t; //il thread
+    int conta; //ogni 10 spostamenti aumenta la velocità
+    int posizione; //coordinata x espressa in pixel
+    Campo c = new Campo(); //l'oggetto campo
     
+    /**
+     * costruttore dove parte la gara
+     * @param c identificativo del cavallo
+     * @param i campo di gara
+     */
     public Gara(Cavallo c, Ippodromo i){
         cavallo = c;
         ippodromo = i;
@@ -29,6 +34,9 @@ public class Gara implements Runnable{
         posizione = 0;
     }
     
+    /**
+     * metodo che muove il cavallo lungo il percorso, cambiando la velocità
+     */
     public void run(){
         int dimImmagine = 80;
         int dimPista = 960;

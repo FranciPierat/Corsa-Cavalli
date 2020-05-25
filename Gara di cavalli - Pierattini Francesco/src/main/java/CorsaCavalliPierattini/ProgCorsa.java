@@ -6,12 +6,13 @@
 package CorsaCavalliPierattini;
 
 /**
- *
- * @author Utente
+ * la classe main
+ * @author Pierattini Francesco
  */
 public class ProgCorsa {
 
     /**
+     * il metodo main che crea l'oggetto home
      * @param args the command line arguments
      */
     public static void main(String[] args) {

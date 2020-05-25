@@ -6,16 +6,22 @@
 package CorsaCavalliPierattini;
 
 /**
- *
- * @author Utente
+ * la classe dei cavalli
+ * @author Pierattini Francesco
  */
 import java.awt.*;
 import javax.swing.*;
 public class Cavallo extends JPanel{
-    int cordx;
-    int cordy;
-    Image img;
+    int cordx; //coordinata x
+    int cordy; //coordinata y
+    Image img; //immagine
     
+    /**
+     * il costruttore che setta le coordinate x e y e
+     * inserisce le immagini dei cavalli
+     * @param yy coordinata y
+     * @param xx coordinata x
+     */
     public Cavallo(int yy, int xx){
         this.cordx = 0;
         this.cordy = yy;
@@ -39,14 +45,27 @@ public class Cavallo extends JPanel{
         catch(InterruptedException e){}
     }
     
+    /**
+     * 
+     * @param n coordinata x
+     */
     public void setCordx(int n){
         this.cordx = n;
     }
     
+    /**
+     * 
+     * @return coordinata x
+     */
     public int getCordx(){
         return this.cordx;
     }
     
+    /**
+     * 
+     * @param g la variabile per inserire le immagini
+     * alle loro coordinate
+     */
     public void paint(Graphics g){
         g.drawImage(img, cordx, cordy, null);
     }

@@ -6,8 +6,8 @@
 package CorsaCavalliPierattini;
 
 /**
- *
- * @author Utente
+ * la classe della musica
+ * @author Pioerattini Francesco
  */
 import sun.audio.*;
 import java.io.File;
@@ -17,9 +17,13 @@ import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 public class Musica{
-    private static Clip clip;
-    private static File file;
+    private static Clip clip; //il file che verrà riprodotto
+    private static File file; //il percorso file
     
+    /**
+     * metodo che avvia la musica
+     * @param musica il percorso file della musica
+     */
     public static void musica(String musica){
         try{
             file = new File(musica);
@@ -33,6 +37,9 @@ public class Musica{
         }
     }
     
+    /**
+     * metodo che stoppa la musica
+     */
     public static void stopMusica(){
         clip.stop();
     }
