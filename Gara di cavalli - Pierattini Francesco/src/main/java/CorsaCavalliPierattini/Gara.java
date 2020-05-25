@@ -38,7 +38,7 @@ public class Gara implements Runnable{
      * metodo che muove il cavallo lungo il percorso, cambiando la velocità
      */
     public void run(){
-        int dimImmagine = 80;
+        int dimImmagine = 45;
         int dimPista = 960;
         while((cavallo.getCordx() + dimImmagine) < dimPista){
             if((conta % 10) == 0)
