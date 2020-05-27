@@ -45,7 +45,7 @@ public class Ippodromo extends JFrame{
             case 9:{setSize(1000,930); break;}
             case 10:{setSize(1000,1030); break;}
         }
-        setIconImage(new ImageIcon("C:\\Users\\Utente\\Desktop\\Corsa Cavalli\\Gara di cavalli - Pierattini Francesco\\src\\immagini\\cavallo1.png").getImage());
+        setIconImage(new ImageIcon("img/cavallo1.png").getImage());
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         pista = new Campo();
         cavalli = new Cavallo[nCavalli];
@@ -63,7 +63,7 @@ public class Ippodromo extends JFrame{
         add(pista);
         setResizable(false);
         setVisible(true);
-        m.musica("C:\\Users\\Utente\\Desktop\\Corsa Cavalli\\Gara di cavalli - Pierattini Francesco\\src\\temi\\Race_theme.wav");
+        m.musica("temi/Race_theme.wav");
     }
     
     /**
@@ -103,7 +103,7 @@ public class Ippodromo extends JFrame{
         JLabel[] arrivi;
         arrivi = new JLabel[n_Cavalli + 1];
         JFrame classifica = new JFrame("Classifica");
-        classifica.setIconImage(new ImageIcon("C:\\Users\\Utente\\Desktop\\Corsa Cavalli\\Gara di cavalli - Pierattini Francesco\\src\\immagini\\cavallo1.png").getImage());
+        classifica.setIconImage(new ImageIcon("img/cavallo1.png").getImage());
         classifica.setSize(500, 1000);
         classifica.setLocation(1040, 0);
         classifica.setBackground(Color.BLUE);
@@ -137,13 +137,13 @@ public class Ippodromo extends JFrame{
             }
         }
         JButton rigioca = new JButton();
-        rigioca.setIcon(new ImageIcon("C:\\Users\\Utente\\Desktop\\Corsa Cavalli\\Gara di cavalli - Pierattini Francesco\\src\\immagini\\rigioca.png"));
+        rigioca.setIcon(new ImageIcon("img/rigioca.png"));
         rigioca.setBorderPainted(false);
         rigioca.setFocusPainted(false);
         rigioca.setContentAreaFilled(false);
         rigioca.setBounds(250, 500, 172, 72);
         JButton esci = new JButton();
-        esci.setIcon(new ImageIcon("C:\\Users\\Utente\\Desktop\\Corsa Cavalli\\Gara di cavalli - Pierattini Francesco\\src\\immagini\\esci.png"));
+        esci.setIcon(new ImageIcon("img/esci.png"));
         esci.setBorderPainted(false);
         esci.setFocusPainted(false);
         esci.setContentAreaFilled(false);

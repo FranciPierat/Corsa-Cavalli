@@ -25,23 +25,23 @@ public class Scommesse extends JFrame{
     public Scommesse(int n){
         n_Cavalli = n;
         JFrame scom = new JFrame("Corsa dei cavalli");
-        scom.setIconImage(new ImageIcon("C:\\Users\\Utente\\Desktop\\Corsa Cavalli\\Gara di cavalli - Pierattini Francesco\\src\\immagini\\cavallo1.png").getImage());
+        scom.setIconImage(new ImageIcon("img/cavallo1.png").getImage());
         scom.setSize(1200, 900);
         scom.setResizable(false);
         scom.setLayout(null);
         scom.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        ImageIcon img = new ImageIcon("C:\\Users\\Utente\\Desktop\\Corsa Cavalli\\Gara di cavalli - Pierattini Francesco\\src\\immagini\\sfondo3.png");
+        ImageIcon img = new ImageIcon("img/sfondo3.png");
         JLabel sfondo3 = new JLabel("", img, JLabel.CENTER);
         sfondo3.setBounds(0, 0, 1200, 900);
         JButton btnSI = new JButton();
-        btnSI.setIcon(new ImageIcon("C:\\Users\\Utente\\Desktop\\Corsa Cavalli\\Gara di cavalli - Pierattini Francesco\\src\\immagini\\btnSI.png"));
+        btnSI.setIcon(new ImageIcon("img/btnSI.png"));
         btnSI.setBorderPainted(false);
         btnSI.setFocusPainted(false);
         btnSI.setContentAreaFilled(false);
         btnSI.setBounds(390, 400, 176, 72);
         sfondo3.add(btnSI);
         JButton btnNO = new JButton();
-        btnNO.setIcon(new ImageIcon("C:\\Users\\Utente\\Desktop\\Corsa Cavalli\\Gara di cavalli - Pierattini Francesco\\src\\immagini\\btnNO.png"));
+        btnNO.setIcon(new ImageIcon("img/btnNO.png"));
         btnNO.setBorderPainted(false);
         btnNO.setFocusPainted(false);
         btnNO.setContentAreaFilled(false);
@@ -75,7 +75,7 @@ public class Scommesse extends JFrame{
      */
     public void cambiaPagina(){
         JFrame scommesse = new JFrame("Corsa dei cavalli");
-        scommesse.setIconImage(new ImageIcon("C:\\Users\\Utente\\Desktop\\Corsa Cavalli\\Gara di cavalli - Pierattini Francesco\\src\\immagini\\cavallo1.png").getImage());
+        scommesse.setIconImage(new ImageIcon("img/cavallo1.png").getImage());
         JPanel pan = new JPanel();
         JLabel labSli = new JLabel("Su quale cavallo vuoi puntare?");
         pan.add(labSli);
@@ -85,7 +85,7 @@ public class Scommesse extends JFrame{
         sli.setValue(1);
         JLabel cavalloScommesso = new JLabel("1");
         JButton btnAvvio = new JButton();
-        btnAvvio.setIcon(new ImageIcon("C:\\Users\\Utente\\Desktop\\Corsa Cavalli\\Gara di cavalli - Pierattini Francesco\\src\\immagini\\inizia.png"));
+        btnAvvio.setIcon(new ImageIcon("img/inizia.png"));
         btnAvvio.setBorderPainted(false);
         btnAvvio.setFocusPainted(false);
         btnAvvio.setContentAreaFilled(false);

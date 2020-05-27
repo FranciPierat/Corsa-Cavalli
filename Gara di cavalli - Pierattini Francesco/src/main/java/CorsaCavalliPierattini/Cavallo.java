@@ -28,16 +28,16 @@ public class Cavallo extends JPanel{
         setSize(80,80);
         Toolkit tk = Toolkit.getDefaultToolkit();
         switch(xx){
-            case 1: {img = tk.getImage("C:\\Users\\Utente\\Desktop\\Corsa Cavalli\\Gara di cavalli - Pierattini Francesco\\src\\immagini\\cavallo1.png"); break;}
-            case 2: {img = tk.getImage("C:\\Users\\Utente\\Desktop\\Corsa Cavalli\\Gara di cavalli - Pierattini Francesco\\src\\immagini\\cavallo2.png"); break;}
-            case 3: {img = tk.getImage("C:\\Users\\Utente\\Desktop\\Corsa Cavalli\\Gara di cavalli - Pierattini Francesco\\src\\immagini\\cavallo3.png"); break;}
-            case 4: {img = tk.getImage("C:\\Users\\Utente\\Desktop\\Corsa Cavalli\\Gara di cavalli - Pierattini Francesco\\src\\immagini\\cavallo4.png"); break;}
-            case 5: {img = tk.getImage("C:\\Users\\Utente\\Desktop\\Corsa Cavalli\\Gara di cavalli - Pierattini Francesco\\src\\immagini\\cavallo5.png"); break;}
-            case 6: {img = tk.getImage("C:\\Users\\Utente\\Desktop\\Corsa Cavalli\\Gara di cavalli - Pierattini Francesco\\src\\immagini\\cavallo6.png"); break;}
-            case 7: {img = tk.getImage("C:\\Users\\Utente\\Desktop\\Corsa Cavalli\\Gara di cavalli - Pierattini Francesco\\src\\immagini\\cavallo7.png"); break;}
-            case 8: {img = tk.getImage("C:\\Users\\Utente\\Desktop\\Corsa Cavalli\\Gara di cavalli - Pierattini Francesco\\src\\immagini\\cavallo8.png"); break;}
-            case 9: {img = tk.getImage("C:\\Users\\Utente\\Desktop\\Corsa Cavalli\\Gara di cavalli - Pierattini Francesco\\src\\immagini\\cavallo9.png"); break;}
-            case 10: {img = tk.getImage("C:\\Users\\Utente\\Desktop\\Corsa Cavalli\\Gara di cavalli - Pierattini Francesco\\src\\immagini\\cavallo10.png"); break;}
+            case 1: {img = tk.getImage("img/cavallo1.png"); break;}
+            case 2: {img = tk.getImage("img/cavallo2.png"); break;}
+            case 3: {img = tk.getImage("img/cavallo3.png"); break;}
+            case 4: {img = tk.getImage("img/cavallo4.png"); break;}
+            case 5: {img = tk.getImage("img/cavallo5.png"); break;}
+            case 6: {img = tk.getImage("img/cavallo6.png"); break;}
+            case 7: {img = tk.getImage("img/cavallo7.png"); break;}
+            case 8: {img = tk.getImage("img/cavallo8.png"); break;}
+            case 9: {img = tk.getImage("img/cavallo9.png"); break;}
+            case 10: {img = tk.getImage("img/cavallo10.png"); break;}
         }
         MediaTracker mt = new MediaTracker(this);
         mt.addImage(img, 1);
