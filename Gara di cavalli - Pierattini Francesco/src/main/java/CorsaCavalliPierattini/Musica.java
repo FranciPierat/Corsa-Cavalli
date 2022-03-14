@@ -9,7 +9,6 @@ package CorsaCavalliPierattini;
  * la classe della musica
  * @author Pioerattini Francesco
  */
-import sun.audio.*;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
